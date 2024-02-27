@@ -1,0 +1,7 @@
+{
+   "salonName":"ASHGABAT \n SPA SALON",
+   "categories":"[\"FACE MASSAGE\", \"FACIAL CLEANING\", \"ADDITIONAL FACIAL PROCEDURES\", \"SPA HAIR\", \"ADDITIONAL HAIR PROCEDURES\", \"DIAGNOSTICS\", \"REJUVENATION MASSAGE\", \"BODY MASSAGE\", \"MANICURE\"]",
+   "procedures": "[ [\"Bucaal massage\",\"Classic massage\",\"Khmer massage with copper coin\" ,\"Sculpture massage\"], [\"Cleaning with hardware\",\"Mechanic cleaning\"], [\"Alginate mask massage\", \"SPA-face\" , \"Porcelain doll massage\"], [\"Scalp peeling\"], [\"Hair glazing\", \"Coffee hair scrub\" , \"Thymine scrub +coconut oil\", \"Scalp cleaning\"], [\"Facial skin Diagnostics\"], [\"RF lifting(face)\", \"SMAS Altera\"], [\"SMAS lifting\", \"Infrared vacuum\"], [\"Manicure\", \"Pedicure\"] ]",
+   "procedureCosts": "[ [\"400 ман \",\"300 ман\",\"500 ман\" ,\"350 ман\"], [\"250 ман\",\"200 ман\"], [\"100 ман\", \"350 ман\" , \"350 ман\"], [\"250 ман\"], [\"350 ман\", \"350 ман\" , \"350 ман\", \"150 ман\"], [\"250 ман\"], [\"350 ман\", \"2000 ман\"], [\"500 ман (Зона)\", \"500 ман\"], [\" \", \" \"] ]"
+
+}
