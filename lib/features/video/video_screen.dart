@@ -32,92 +32,112 @@ class _VideoScreenState extends State<VideoScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: mainAppBar(context, true),
-      body: Stack(
-        alignment: Alignment.topCenter,
-        children: [
-          Image.asset(
-            'assets/images/background.jpg',
-            width: MediaQuery.of(context).size.width,
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height / 3.5 + 80),
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: double.infinity,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(50),
-                  topLeft: Radius.circular(50),
-                ),
-                color: Color(0xFFF7DED0),
+    return OrientationBuilder(builder: (context, orientation) {
+      return Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: mainAppBar(context, true),
+        body: Stack(
+          alignment: orientation == Orientation.portrait
+              ? Alignment.topCenter
+              : Alignment.centerLeft,
+          children: [
+            Image.asset(
+              'assets/images/background.jpg',
+              fit: BoxFit.cover,
+              width: orientation == Orientation.portrait
+                  ? MediaQuery.of(context).size.width
+                  : MediaQuery.of(context).size.width / 3.5 + 130,
+              height: orientation == Orientation.portrait
+                  ? MediaQuery.of(context).size.height / 3.5 + 120
+                  : MediaQuery.of(context).size.height,
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: orientation == Orientation.portrait
+                    ? MediaQuery.of(context).size.height / 3.5 + 80
+                    : 0,
+                left: orientation == Orientation.portrait
+                    ? 0
+                    : MediaQuery.of(context).size.width / 3.5 + 130,
               ),
-              child: Column(
-                children: [
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/logo.png',
-                        width: 50,
-                        height: 50,
-                      ),
-                      Text(
-                        AppLocalizations.of(context)!.salonName,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                            fontSize: 25,
-                            color: Color(0xFF944E63),
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                  Expanded(
-                    child: ListView.builder(
-                      itemCount: videoPaths.length,
-                      itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.only(bottom: 100.0),
-                          child: SizedBox(
-                            height: 300,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                if (index % 2 != 0)
-                                  procedureName(
-                                      text: widget.pocedures[index],
-                                      cost: widget.pocedureCosts[index]),
-                                Padding(
-                                  padding: index % 2 == 0
-                                      ? const EdgeInsets.only(left: 40.0)
-                                      : const EdgeInsets.only(right: 40),
-                                  child: VideoListItem(
-                                      videoUrl: videoPaths[index]),
-                                ),
-                                if (index % 2 == 0)
-                                  procedureName(
-                                      text: widget.pocedures[index],
-                                      cost: widget.pocedureCosts[index]),
-                              ],
-                            ),
-                          ),
-                        );
-                      },
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: double.infinity,
+                decoration: orientation == Orientation.portrait
+                    ? const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(50),
+                          topLeft: Radius.circular(50),
+                        ),
+                        color: Color(0xFFF7DED0),
+                      )
+                    : null,
+                color: const Color(0xFFF7DED0),
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 15,
                     ),
-                  ),
-                ],
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/images/logo.png',
+                          width: 50,
+                          height: 50,
+                        ),
+                        Text(
+                          AppLocalizations.of(context)!.salonName,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                              fontSize: 25,
+                              color: Color(0xFF944E63),
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
+                    Expanded(
+                      child: ListView.builder(
+                        itemCount: videoPaths.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(bottom: 100.0),
+                            child: SizedBox(
+                              height: 300,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  if (index % 2 != 0)
+                                    procedureName(
+                                        text: widget.pocedures[index],
+                                        cost: widget.pocedureCosts[index]),
+                                  Padding(
+                                    padding: index % 2 == 0
+                                        ? const EdgeInsets.only(left: 40.0)
+                                        : const EdgeInsets.only(right: 40),
+                                    child: VideoListItem(
+                                        videoUrl: videoPaths[index]),
+                                  ),
+                                  if (index % 2 == 0)
+                                    procedureName(
+                                        text: widget.pocedures[index],
+                                        cost: widget.pocedureCosts[index]),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-    );
+          ],
+        ),
+      );
+    });
   }
 
   Expanded procedureName({required String text, required String cost}) {
@@ -135,7 +155,7 @@ class _VideoScreenState extends State<VideoScreen> {
           ),
           Text(
             cost,
-            style: TextStyle(fontSize: 22, color: Colors.orangeAccent),
+            style: const TextStyle(fontSize: 22, color: Colors.orangeAccent),
           )
         ],
       ),

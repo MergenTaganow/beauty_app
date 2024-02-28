@@ -44,105 +44,125 @@ class _MyHomePageState extends State<MyHomePage> {
         json.decode(jsontextcost).map((list) => List<String>.from(list)));
     print(procedureCosts);
 
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: mainAppBar(context),
-      body: Stack(
-        alignment: Alignment.topCenter,
-        children: [
-          Image.asset(
-            'assets/images/background.jpg',
-            width: MediaQuery.of(context).size.width,
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height / 3.5 + 80),
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: double.infinity,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(50),
-                  topLeft: Radius.circular(50),
-                ),
-                color: Color(0xFFF7DED0),
+    return OrientationBuilder(builder: (context, orientation) {
+      return Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: mainAppBar(context),
+        body: Stack(
+          alignment: orientation == Orientation.portrait
+              ? Alignment.topCenter
+              : Alignment.centerLeft,
+          children: [
+            Image.asset(
+              'assets/images/background.jpg',
+              fit: BoxFit.cover,
+              width: orientation == Orientation.portrait
+                  ? MediaQuery.of(context).size.width
+                  : MediaQuery.of(context).size.width / 3.5 + 130,
+              height: orientation == Orientation.portrait
+                  ? MediaQuery.of(context).size.height / 3.5 + 120
+                  : MediaQuery.of(context).size.height,
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: orientation == Orientation.portrait
+                    ? MediaQuery.of(context).size.height / 3.5 + 80
+                    : 0,
+                left: orientation == Orientation.portrait
+                    ? 0
+                    : MediaQuery.of(context).size.width / 3.5 + 130,
               ),
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/logo.png',
-                        width: 50,
-                        height: 50,
-                      ),
-                      Text(
-                        AppLocalizations.of(context)!.salonName,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                            fontSize: 25,
-                            color: Color(0xFF944E63),
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 15),
-                  Expanded(
-                    child: GridView.builder(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30, vertical: 15),
-                      itemCount: categories.length,
-                      itemBuilder: (context, index) {
-                        return GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => VideoScreen(
-                                          videoFolder: categoryVideo[index],
-                                          videoCount: videoCount[index],
-                                          pocedures: procedures[index],
-                                          pocedureCosts: procedureCosts[index],
-                                        )));
-                          },
-                          child: SizedBox(
-                            height: 50,
-                            child: Card(
-                              color: const Color(0xFFF9B38D),
-                              child: Center(
-                                child: Text(
-                                  categories[index],
-                                  textAlign: TextAlign.center,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: double.infinity,
+                decoration: orientation == Orientation.portrait
+                    ? const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(50),
+                          topLeft: Radius.circular(50),
+                        ),
+                        color: Color(0xFFF7DED0),
+                      )
+                    : null,
+                color: const Color(0xFFF7DED0),
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/images/logo.png',
+                          width: 50,
+                          height: 50,
+                        ),
+                        Text(
+                          AppLocalizations.of(context)!.salonName,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                              fontSize: 25,
+                              color: Color(0xFF944E63),
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 15),
+                    Expanded(
+                      child: GridView.builder(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 30, vertical: 15),
+                        itemCount: categories.length,
+                        itemBuilder: (context, index) {
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => VideoScreen(
+                                            videoFolder: categoryVideo[index],
+                                            videoCount: videoCount[index],
+                                            pocedures: procedures[index],
+                                            pocedureCosts:
+                                                procedureCosts[index],
+                                          )));
+                            },
+                            child: SizedBox(
+                              height: 50,
+                              child: Card(
+                                color: const Color(0xFFF9B38D),
+                                child: Center(
+                                  child: Text(
+                                    categories[index],
+                                    textAlign: TextAlign.center,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        );
-                      },
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        mainAxisSpacing: 15,
-                        crossAxisSpacing: 15,
-                        childAspectRatio: 2,
-                        crossAxisCount: 2,
+                          );
+                        },
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          mainAxisSpacing: 15,
+                          crossAxisSpacing: 15,
+                          childAspectRatio: 2,
+                          crossAxisCount: 2,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
+                // ListView.builder(
+                //   itemBuilder: (context, index) {
+                //     return Card();
+                //   },
+                // ),
               ),
-              // ListView.builder(
-              //   itemBuilder: (context, index) {
-              //     return Card();
-              //   },
-              // ),
             ),
-          ),
-        ],
-      ),
-    );
+          ],
+        ),
+      );
+    });
   }
 }
