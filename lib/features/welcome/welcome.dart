@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
     "BODY_MASSAGE",
     "MANICURE"
   ];
-  List<int> videoCount = [4, 2, 3, 1, 4, 1, 2, 2, 2];
+  List<int> videoCount = [5, 4, 3, 4, 4, 1, 2, 3, 2];
   List<List<String>> procedures = [];
   List<List<String>> procedureCosts = [];
 
@@ -83,8 +83,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         color: Color(0xFFF7DED0),
                       )
-                    : null,
-                color: const Color(0xFFF7DED0),
+                    : const BoxDecoration(
+                        color: Color(0xFFF7DED0),
+                      ),
                 child: Column(
                   children: [
                     const SizedBox(

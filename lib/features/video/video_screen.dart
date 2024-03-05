@@ -71,8 +71,9 @@ class _VideoScreenState extends State<VideoScreen> {
                         ),
                         color: Color(0xFFF7DED0),
                       )
-                    : null,
-                color: const Color(0xFFF7DED0),
+                    : const BoxDecoration(
+                        color: Color(0xFFF7DED0),
+                      ),
                 child: Column(
                   children: [
                     const SizedBox(

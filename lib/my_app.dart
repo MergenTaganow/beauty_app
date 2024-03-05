@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:tashli/features/welcome/welcome.dart';
 
 class MyApp extends StatefulWidget {
@@ -36,8 +35,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-          textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)),
+      theme: ThemeData(fontFamily: 'GoogleFonts.inter'),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: _locale,

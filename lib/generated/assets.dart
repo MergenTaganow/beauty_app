@@ -18,13 +18,17 @@ class Assets {
       'assets/videos/ADDITIONAL_HAIR_PROCEDURES/4.MOV';
   static const String bODYMASSAGE1 = 'assets/videos/BODY_MASSAGE/1.MOV';
   static const String bODYMASSAGE2 = 'assets/videos/BODY_MASSAGE/2.MOV';
+  static const String bODYMASSAGE3 = 'assets/videos/BODY_MASSAGE/3.MOV';
   static const String dIAGNOSTICS1 = 'assets/videos/DIAGNOSTICS/1.MOV';
   static const String fACEMASSAGE1 = 'assets/videos/FACE_MASSAGE/1.MOV';
   static const String fACEMASSAGE2 = 'assets/videos/FACE_MASSAGE/2.MOV';
   static const String fACEMASSAGE3 = 'assets/videos/FACE_MASSAGE/3.MOV';
   static const String fACEMASSAGE4 = 'assets/videos/FACE_MASSAGE/4.MOV';
+  static const String fACEMASSAGE5 = 'assets/videos/FACE_MASSAGE/5.MOV';
   static const String fACIALCLEANING1 = 'assets/videos/FACIAL_CLEANING/1.MOV';
   static const String fACIALCLEANING2 = 'assets/videos/FACIAL_CLEANING/2.MOV';
+  static const String fACIALCLEANING3 = 'assets/videos/FACIAL_CLEANING/3.MOV';
+  static const String fACIALCLEANING4 = 'assets/videos/FACIAL_CLEANING/4.MOV';
   static const String googleFontsInterBlack =
       'assets/google_fonts/Inter-Black.ttf';
   static const String googleFontsInterBold =
@@ -44,6 +48,7 @@ class Assets {
   static const String googleFontsInterThin =
       'assets/google_fonts/Inter-Thin.ttf';
   static const String imagesBackground = 'assets/images/background.jpg';
+  static const String imagesIcon = 'assets/images/icon.png';
   static const String imagesLogo = 'assets/images/logo.png';
   static const String mANICURE1 = 'assets/videos/MANICURE/1.MOV';
   static const String mANICURE2 = 'assets/videos/MANICURE/2.MOV';
@@ -52,4 +57,7 @@ class Assets {
   static const String rEJUVENATIONMASSAGE2 =
       'assets/videos/REJUVENATION_MASSAGE/2.MOV';
   static const String sPAHAIR1 = 'assets/videos/SPA_HAIR/1.MOV';
+  static const String sPAHAIR2 = 'assets/videos/SPA_HAIR/2.MOV';
+  static const String sPAHAIR3 = 'assets/videos/SPA_HAIR/3.MOV';
+  static const String sPAHAIR4 = 'assets/videos/SPA_HAIR/4.MOV';
 }
