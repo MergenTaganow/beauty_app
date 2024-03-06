@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:tashli/features/video/video_screen.dart';
+import 'package:tashli/features/welcome/manicure_page.dart';
 import 'package:tashli/features/welcome/widgets/main_app_bar.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -118,16 +119,24 @@ class _MyHomePageState extends State<MyHomePage> {
                         itemBuilder: (context, index) {
                           return GestureDetector(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => VideoScreen(
-                                            videoFolder: categoryVideo[index],
-                                            videoCount: videoCount[index],
-                                            pocedures: procedures[index],
-                                            pocedureCosts:
-                                                procedureCosts[index],
-                                          )));
+                              if (index != categories.length - 1) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => VideoScreen(
+                                              videoFolder: categoryVideo[index],
+                                              videoCount: videoCount[index],
+                                              pocedures: procedures[index],
+                                              pocedureCosts:
+                                                  procedureCosts[index],
+                                            )));
+                              } else {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ManicureScreen()));
+                              }
                             },
                             child: SizedBox(
                               height: 50,
