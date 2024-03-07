@@ -42,7 +42,7 @@ class _VideoScreenState extends State<VideoScreen> {
               : Alignment.centerLeft,
           children: [
             Image.asset(
-              'assets/images/background.jpg',
+              'assets/images/fon.jpg',
               fit: BoxFit.cover,
               width: orientation == Orientation.portrait
                   ? MediaQuery.of(context).size.width
@@ -54,7 +54,7 @@ class _VideoScreenState extends State<VideoScreen> {
             Padding(
               padding: EdgeInsets.only(
                 top: orientation == Orientation.portrait
-                    ? MediaQuery.of(context).size.height / 3.5 + 80
+                    ? MediaQuery.of(context).size.height / 3.5 + 75
                     : 0,
                 left: orientation == Orientation.portrait
                     ? 0
@@ -64,15 +64,15 @@ class _VideoScreenState extends State<VideoScreen> {
                 width: MediaQuery.of(context).size.width,
                 height: double.infinity,
                 decoration: orientation == Orientation.portrait
-                    ? const BoxDecoration(
-                        borderRadius: BorderRadius.only(
+                    ? BoxDecoration(
+                        borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(50),
                           topLeft: Radius.circular(50),
                         ),
-                        color: Color(0xFFF7DED0),
+                        color: Renk.backColor,
                       )
-                    : const BoxDecoration(
-                        color: Color(0xFFF7DED0),
+                    : BoxDecoration(
+                        color: Renk.backColor,
                       ),
                 child: Column(
                   children: [
@@ -82,17 +82,17 @@ class _VideoScreenState extends State<VideoScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          'assets/images/logo.png',
-                          width: 50,
-                          height: 50,
-                        ),
+                        // Image.asset(
+                        //   'assets/images/logo.png',
+                        //   width: 50,
+                        //   height: 50,
+                        // ),
                         Text(
                           AppLocalizations.of(context)!.salonName,
                           textAlign: TextAlign.center,
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontSize: 25,
-                              color: Color(0xFF944E63),
+                              color: Renk.textColor,
                               fontWeight: FontWeight.w500),
                         ),
                       ],
@@ -149,9 +149,9 @@ class _VideoScreenState extends State<VideoScreen> {
           Text(
             text,
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 20,
-              color: Color(0xFF944E63),
+              color: Renk.textColor,
             ),
           ),
           Text(

@@ -55,8 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
               : Alignment.centerLeft,
           children: [
             Image.asset(
-              'assets/images/background.jpg',
-              fit: BoxFit.cover,
+              'assets/images/fon.jpg',
+              fit: orientation == Orientation.portrait
+                  ? BoxFit.cover
+                  : BoxFit.fill,
               width: orientation == Orientation.portrait
                   ? MediaQuery.of(context).size.width
                   : MediaQuery.of(context).size.width / 3.5 + 130,
@@ -67,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: EdgeInsets.only(
                 top: orientation == Orientation.portrait
-                    ? MediaQuery.of(context).size.height / 3.5 + 80
+                    ? MediaQuery.of(context).size.height / 3.5 + 75
                     : 0,
                 left: orientation == Orientation.portrait
                     ? 0
@@ -77,15 +79,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: MediaQuery.of(context).size.width,
                 height: double.infinity,
                 decoration: orientation == Orientation.portrait
-                    ? const BoxDecoration(
-                        borderRadius: BorderRadius.only(
+                    ? BoxDecoration(
+                        borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(50),
                           topLeft: Radius.circular(50),
                         ),
-                        color: Color(0xFFF7DED0),
+                        color: Renk.backColor,
                       )
-                    : const BoxDecoration(
-                        color: Color(0xFFF7DED0),
+                    : BoxDecoration(
+                        color: Renk.backColor,
                       ),
                 child: Column(
                   children: [
@@ -95,17 +97,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          'assets/images/logo.png',
-                          width: 50,
-                          height: 50,
-                        ),
+                        // Image.asset(
+                        //   'assets/images/logo.png',
+                        //   width: 50,
+                        //   height: 50,
+                        // ),
                         Text(
                           AppLocalizations.of(context)!.salonName,
                           textAlign: TextAlign.center,
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontSize: 25,
-                              color: Color(0xFF944E63),
+                              color: Renk.textColor,
                               fontWeight: FontWeight.w500),
                         ),
                       ],
@@ -141,11 +143,12 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: SizedBox(
                               height: 50,
                               child: Card(
-                                color: const Color(0xFFF9B38D),
+                                color: Renk.cardColor,
                                 child: Center(
                                   child: Text(
                                     categories[index],
                                     textAlign: TextAlign.center,
+                                    style: TextStyle(color: Renk.textColor),
                                   ),
                                 ),
                               ),

@@ -29,7 +29,7 @@ class ManicureScreen extends StatelessWidget {
                 : Alignment.centerLeft,
             children: [
               Image.asset(
-                'assets/images/background.jpg',
+                'assets/images/fon.jpg',
                 fit: BoxFit.cover,
                 width: orientation == Orientation.portrait
                     ? MediaQuery.of(context).size.width
@@ -41,7 +41,7 @@ class ManicureScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(
                   top: orientation == Orientation.portrait
-                      ? MediaQuery.of(context).size.height / 3.5 + 80
+                      ? MediaQuery.of(context).size.height / 3.5 + 75
                       : 0,
                   left: orientation == Orientation.portrait
                       ? 0
@@ -51,15 +51,15 @@ class ManicureScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   height: double.infinity,
                   decoration: orientation == Orientation.portrait
-                      ? const BoxDecoration(
+                      ? BoxDecoration(
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(50),
                             topLeft: Radius.circular(50),
                           ),
-                          color: Color(0xFFF7DED0),
+                          color: Renk.backColor,
                         )
-                      : const BoxDecoration(
-                          color: Color(0xFFF7DED0),
+                      : BoxDecoration(
+                          color: Renk.backColor,
                         ),
                   child: Column(
                     children: [
@@ -69,17 +69,17 @@ class ManicureScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(
-                            'assets/images/logo.png',
-                            width: 50,
-                            height: 50,
-                          ),
+                          // Image.asset(
+                          //   'assets/images/logo.png',
+                          //   width: 50,
+                          //   height: 50,
+                          // ),
                           Text(
                             AppLocalizations.of(context)!.salonName,
                             textAlign: TextAlign.center,
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontSize: 25,
-                                color: Color(0xFF944E63),
+                                color: Renk.textColor,
                                 fontWeight: FontWeight.w500),
                           ),
                         ],
@@ -91,14 +91,14 @@ class ManicureScreen extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 50.0, vertical: 5),
                               child: Card(
-                                color: const Color(0xFFF7DED0),
+                                color: Renk.cardColor,
                                 child: ListTile(
                                   title: Text(
                                     manicure[index],
                                     softWrap: true,
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 18,
-                                      color: Color(0xFF944E63),
+                                      color: Renk.textColor,
                                     ),
                                   ),
                                   trailing: Text(

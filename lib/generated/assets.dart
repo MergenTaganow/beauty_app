@@ -47,8 +47,7 @@ class Assets {
       'assets/google_fonts/Inter-SemiBold.ttf';
   static const String googleFontsInterThin =
       'assets/google_fonts/Inter-Thin.ttf';
-  static const String imagesBackground = 'assets/images/background.jpg';
-  static const String imagesIcon = 'assets/images/icon.png';
+  static const String imagesFon = 'assets/images/fon.jpg';
   static const String imagesLogo = 'assets/images/logo.png';
   static const String mANICURE1 = 'assets/videos/MANICURE/1.MOV';
   static const String mANICURE2 = 'assets/videos/MANICURE/2.MOV';

@@ -66,3 +66,9 @@ AppBar mainAppBar(BuildContext context, [bool withPop = false]) {
     ],
   );
 }
+
+class Renk {
+  static Color backColor = Color(0xFF5FBDFF);
+  static Color cardColor = Color(0xFF96EFFF);
+  static Color textColor = Color(0xFF1B1A55);
+}
