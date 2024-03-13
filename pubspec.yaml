@@ -81,10 +81,10 @@ flutter:
     - assets/videos/BODY_MASSAGE/
     - assets/videos/DIAGNOSTICS/
     - assets/videos/FACE_MASSAGE/
-    - assets/videos/FACIAL_CLEANING/
     - assets/videos/MANICURE/
     - assets/videos/REJUVENATION_MASSAGE/
     - assets/videos/SPA_HAIR/
+    - assets/videos/CLEANING/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

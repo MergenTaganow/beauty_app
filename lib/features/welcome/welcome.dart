@@ -16,16 +16,14 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List<String> categoryVideo = [
     "FACE_MASSAGE",
-    "FACIAL_CLEANING",
-    "ADDITIONAL_FACIAL_PROCEDURES",
-    "SPA_HAIR",
-    "ADDITIONAL_HAIR_PROCEDURES",
+    "CLEANING",
     "DIAGNOSTICS",
-    "REJUVENATION_MASSAGE",
+    "ADDITIONAL_FACIAL_PROCEDURES",
     "BODY_MASSAGE",
+    "SPA_HAIR",
     "MANICURE"
   ];
-  List<int> videoCount = [5, 4, 3, 4, 4, 1, 2, 3, 2];
+  List<int> videoCount = [6, 9, 1, 11, 5, 7];
   List<List<String>> procedures = [];
   List<List<String>> procedureCosts = [];
 

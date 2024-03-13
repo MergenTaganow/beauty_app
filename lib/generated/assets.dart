@@ -3,11 +3,27 @@ class Assets {
   Assets._();
 
   static const String aDDITIONALFACIALPROCEDURES1 =
-      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/1.MOV';
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/1.mp4';
+  static const String aDDITIONALFACIALPROCEDURES10 =
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/10.mp4';
+  static const String aDDITIONALFACIALPROCEDURES11 =
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/11.mp4';
   static const String aDDITIONALFACIALPROCEDURES2 =
-      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/2.MOV';
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/2.mp4';
   static const String aDDITIONALFACIALPROCEDURES3 =
-      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/3.MOV';
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/3.mp4';
+  static const String aDDITIONALFACIALPROCEDURES4 =
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/4.mp4';
+  static const String aDDITIONALFACIALPROCEDURES5 =
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/5.mp4';
+  static const String aDDITIONALFACIALPROCEDURES6 =
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/6.mp4';
+  static const String aDDITIONALFACIALPROCEDURES7 =
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/7.mp4';
+  static const String aDDITIONALFACIALPROCEDURES8 =
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/8.mp4';
+  static const String aDDITIONALFACIALPROCEDURES9 =
+      'assets/videos/ADDITIONAL_FACIAL_PROCEDURES/9.mp4';
   static const String aDDITIONALHAIRPROCEDURES1 =
       'assets/videos/ADDITIONAL_HAIR_PROCEDURES/1.MOV';
   static const String aDDITIONALHAIRPROCEDURES2 =
@@ -16,19 +32,27 @@ class Assets {
       'assets/videos/ADDITIONAL_HAIR_PROCEDURES/3.MOV';
   static const String aDDITIONALHAIRPROCEDURES4 =
       'assets/videos/ADDITIONAL_HAIR_PROCEDURES/4.MOV';
-  static const String bODYMASSAGE1 = 'assets/videos/BODY_MASSAGE/1.MOV';
-  static const String bODYMASSAGE2 = 'assets/videos/BODY_MASSAGE/2.MOV';
-  static const String bODYMASSAGE3 = 'assets/videos/BODY_MASSAGE/3.MOV';
-  static const String dIAGNOSTICS1 = 'assets/videos/DIAGNOSTICS/1.MOV';
-  static const String fACEMASSAGE1 = 'assets/videos/FACE_MASSAGE/1.MOV';
-  static const String fACEMASSAGE2 = 'assets/videos/FACE_MASSAGE/2.MOV';
-  static const String fACEMASSAGE3 = 'assets/videos/FACE_MASSAGE/3.MOV';
-  static const String fACEMASSAGE4 = 'assets/videos/FACE_MASSAGE/4.MOV';
-  static const String fACEMASSAGE5 = 'assets/videos/FACE_MASSAGE/5.MOV';
-  static const String fACIALCLEANING1 = 'assets/videos/FACIAL_CLEANING/1.MOV';
-  static const String fACIALCLEANING2 = 'assets/videos/FACIAL_CLEANING/2.MOV';
-  static const String fACIALCLEANING3 = 'assets/videos/FACIAL_CLEANING/3.MOV';
-  static const String fACIALCLEANING4 = 'assets/videos/FACIAL_CLEANING/4.MOV';
+  static const String bODYMASSAGE1 = 'assets/videos/BODY_MASSAGE/1.mp4';
+  static const String bODYMASSAGE2 = 'assets/videos/BODY_MASSAGE/2.mp4';
+  static const String bODYMASSAGE3 = 'assets/videos/BODY_MASSAGE/3.mp4';
+  static const String bODYMASSAGE4 = 'assets/videos/BODY_MASSAGE/4.mp4';
+  static const String bODYMASSAGE5 = 'assets/videos/BODY_MASSAGE/5.mp4';
+  static const String cLEANING1 = 'assets/videos/CLEANING/1.mp4';
+  static const String cLEANING2 = 'assets/videos/CLEANING/2.mp4';
+  static const String cLEANING3 = 'assets/videos/CLEANING/3.mp4';
+  static const String cLEANING4 = 'assets/videos/CLEANING/4.mp4';
+  static const String cLEANING5 = 'assets/videos/CLEANING/5.mp4';
+  static const String cLEANING6 = 'assets/videos/CLEANING/6.mp4';
+  static const String cLEANING7 = 'assets/videos/CLEANING/7.mp4';
+  static const String cLEANING8 = 'assets/videos/CLEANING/8.mp4';
+  static const String cLEANING9 = 'assets/videos/CLEANING/9.mp4';
+  static const String dIAGNOSTICS1 = 'assets/videos/DIAGNOSTICS/1.mp4';
+  static const String fACEMASSAGE1 = 'assets/videos/FACE_MASSAGE/1.mp4';
+  static const String fACEMASSAGE2 = 'assets/videos/FACE_MASSAGE/2.mp4';
+  static const String fACEMASSAGE3 = 'assets/videos/FACE_MASSAGE/3.mp4';
+  static const String fACEMASSAGE4 = 'assets/videos/FACE_MASSAGE/4.mp4';
+  static const String fACEMASSAGE5 = 'assets/videos/FACE_MASSAGE/5.mp4';
+  static const String fACEMASSAGE6 = 'assets/videos/FACE_MASSAGE/6.mp4';
   static const String googleFontsInterBlack =
       'assets/google_fonts/Inter-Black.ttf';
   static const String googleFontsInterBold =
@@ -55,8 +79,11 @@ class Assets {
       'assets/videos/REJUVENATION_MASSAGE/1.MOV';
   static const String rEJUVENATIONMASSAGE2 =
       'assets/videos/REJUVENATION_MASSAGE/2.MOV';
-  static const String sPAHAIR1 = 'assets/videos/SPA_HAIR/1.MOV';
-  static const String sPAHAIR2 = 'assets/videos/SPA_HAIR/2.MOV';
-  static const String sPAHAIR3 = 'assets/videos/SPA_HAIR/3.MOV';
-  static const String sPAHAIR4 = 'assets/videos/SPA_HAIR/4.MOV';
+  static const String sPAHAIR1 = 'assets/videos/SPA_HAIR/1.mp4';
+  static const String sPAHAIR2 = 'assets/videos/SPA_HAIR/2.mp4';
+  static const String sPAHAIR3 = 'assets/videos/SPA_HAIR/3.mp4';
+  static const String sPAHAIR4 = 'assets/videos/SPA_HAIR/4.mp4';
+  static const String sPAHAIR5 = 'assets/videos/SPA_HAIR/5.mp4';
+  static const String sPAHAIR6 = 'assets/videos/SPA_HAIR/6.mp4';
+  static const String sPAHAIR7 = 'assets/videos/SPA_HAIR/7.mp4';
 }

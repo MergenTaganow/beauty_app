@@ -27,6 +27,7 @@ class _VideoListItemState extends State<VideoListItem> {
       widget.videoUrl,
       // videoPlayerOptions: VideoPlayerOptions(mixWithOthers: true),
     )
+      ..setVolume(0)
       ..initialize().then((_) => setState(() {}))
       ..setLooping(true);
   }

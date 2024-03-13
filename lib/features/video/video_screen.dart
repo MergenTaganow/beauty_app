@@ -26,7 +26,7 @@ class _VideoScreenState extends State<VideoScreen> {
   @override
   void initState() {
     videoPaths = List<String>.generate(widget.videoCount,
-        (index) => 'assets/videos/${widget.videoFolder}/${index + 1}.MOV');
+        (index) => 'assets/videos/${widget.videoFolder}/${index + 1}.mp4');
     // print(videoPaths);
   }
 
